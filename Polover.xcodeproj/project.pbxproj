@@ -12,9 +12,13 @@
 		539C8553210A723100FDAC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539C8551210A723100FDAC65 /* Main.storyboard */; };
 		539C8555210A723500FDAC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539C8554210A723500FDAC65 /* Assets.xcassets */; };
 		539C8558210A723500FDAC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539C8556210A723500FDAC65 /* LaunchScreen.storyboard */; };
+		539C8560210A735800FDAC65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539C855F210A735800FDAC65 /* GoogleService-Info.plist */; };
+		5FCFF80C8852F91EA2F15E70 /* Pods_Polover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62740B74E9E9F1E3E533332 /* Pods_Polover.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14FF91A14CDADCF28CA474AC /* Pods-Polover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Polover/Pods-Polover.debug.xcconfig"; sourceTree = "<group>"; };
+		2498879113B75A99E3F5E5C2 /* Pods-Polover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polover.release.xcconfig"; path = "Pods/Target Support Files/Pods-Polover/Pods-Polover.release.xcconfig"; sourceTree = "<group>"; };
 		539C854A210A723100FDAC65 /* Polover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539C854D210A723100FDAC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539C854F210A723100FDAC65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		539C8554210A723500FDAC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		539C8557210A723500FDAC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539C8559210A723500FDAC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		539C855F210A735800FDAC65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C62740B74E9E9F1E3E533332 /* Pods_Polover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCFF80C8852F91EA2F15E70 /* Pods_Polover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135609AD49F050DCB406F3E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C62740B74E9E9F1E3E533332 /* Pods_Polover.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5321095F210A7731000CA8A9 /* Home View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				539C854F210A723100FDAC65 /* ViewController.swift */,
+			);
+			path = "Home View Controller";
+			sourceTree = "<group>";
+		};
 		539C8541210A723100FDAC65 = {
 			isa = PBXGroup;
 			children = (
 				539C854C210A723100FDAC65 /* Polover */,
 				539C854B210A723100FDAC65 /* Products */,
+				7D58582458E516CB6D1B6F57 /* Pods */,
+				135609AD49F050DCB406F3E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +79,24 @@
 		539C854C210A723100FDAC65 /* Polover */ = {
 			isa = PBXGroup;
 			children = (
+				5321095F210A7731000CA8A9 /* Home View Controller */,
 				539C854D210A723100FDAC65 /* AppDelegate.swift */,
-				539C854F210A723100FDAC65 /* ViewController.swift */,
 				539C8551210A723100FDAC65 /* Main.storyboard */,
 				539C8554210A723500FDAC65 /* Assets.xcassets */,
 				539C8556210A723500FDAC65 /* LaunchScreen.storyboard */,
 				539C8559210A723500FDAC65 /* Info.plist */,
+				539C855F210A735800FDAC65 /* GoogleService-Info.plist */,
 			);
 			path = Polover;
+			sourceTree = "<group>";
+		};
+		7D58582458E516CB6D1B6F57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14FF91A14CDADCF28CA474AC /* Pods-Polover.debug.xcconfig */,
+				2498879113B75A99E3F5E5C2 /* Pods-Polover.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 539C855C210A723500FDAC65 /* Build configuration list for PBXNativeTarget "Polover" */;
 			buildPhases = (
+				C469F0384AE30A5A49622426 /* [CP] Check Pods Manifest.lock */,
 				539C8546210A723100FDAC65 /* Sources */,
 				539C8547210A723100FDAC65 /* Frameworks */,
 				539C8548210A723100FDAC65 /* Resources */,
+				BDA8EA836A3C8245904F6960 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539C8560210A735800FDAC65 /* GoogleService-Info.plist in Resources */,
 				539C8558210A723500FDAC65 /* LaunchScreen.storyboard in Resources */,
 				539C8555210A723500FDAC65 /* Assets.xcassets in Resources */,
 				539C8553210A723100FDAC65 /* Main.storyboard in Resources */,
@@ -129,6 +167,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BDA8EA836A3C8245904F6960 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Polover/Pods-Polover-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Polover/Pods-Polover-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C469F0384AE30A5A49622426 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Polover-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		539C8546210A723100FDAC65 /* Sources */ = {
@@ -278,6 +359,7 @@
 		};
 		539C855D210A723500FDAC65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FF91A14CDADCF28CA474AC /* Pods-Polover.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +378,7 @@
 		};
 		539C855E210A723500FDAC65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2498879113B75A99E3F5E5C2 /* Pods-Polover.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

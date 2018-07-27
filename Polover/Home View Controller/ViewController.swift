@@ -28,7 +28,19 @@ class ViewController: UIViewController {
 
     @IBAction func signUPTapped(_ sender: UIButton) {
         
+        if emailTextField.text == "" || passwordTextField.text == "" {
+            displayAlert(title: "Missing Information ", message: "You must provide email and password")
+         
+        }
         
+    }
+    
+    
+    // Alert controller
+    func displayAlert(title:String , message: String ){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func logInTapped(_ sender: UIButton) {

@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField:UITextField!
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
                                 
                             }else {
                                 print("Sign UP Success")
+                                 self.performSegue(withIdentifier: "riderSegue", sender: nil)
                             }
                             
                         })
@@ -66,6 +67,7 @@ class ViewController: UIViewController {
                                 
                             }else {
                                 print("Sign in Success")
+                                self.performSegue(withIdentifier: "riderSegue", sender: nil)
                             }
                         })
                     }

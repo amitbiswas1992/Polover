@@ -8,9 +8,10 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField:UITextField!
     @IBOutlet weak var riderDriverSwitch: UISwitch!
@@ -23,18 +24,56 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        FirebaseApp.configure()
     }
-
+    
     @IBAction func signUPTapped(_ sender: UIButton) {
         
         if emailTextField.text == "" || passwordTextField.text == "" {
             displayAlert(title: "Missing Information ", message: "You must provide email and password")
-         
+            
+        } else {
+            
+            if let email = emailTextField.text{
+                if let password = passwordTextField.text{
+                    
+                    
+                    
+                    if signUpMood{
+                        //SIGN UP
+                        
+                        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                            if error != nil {
+                                self.displayAlert(title: "Error", message: error!.localizedDescription)
+                                
+                                
+                            }else {
+                                print("Sign UP Success")
+                            }
+                            
+                        })
+                        
+                        
+                        
+                    }else{
+                        // LOG IN
+                        
+                        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                            
+                            if error != nil {
+                                self.displayAlert(title: "Error", message: error!.localizedDescription)
+                                
+                                
+                            }else {
+                                print("Sign in Success")
+                            }
+                        })
+                    }
+                }
+            }
         }
         
     }
-    
     
     // Alert controller
     func displayAlert(title:String , message: String ){
@@ -65,4 +104,5 @@ class ViewController: UIViewController {
     }
     
 }
+
 

@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="8U5-fk-VZR" userLabel="SignupSV">
                                 <rect key="frame" x="65" y="326" width="245" height="132"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJm-3w-GGv">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@amit.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJm-3w-GGv">
                                         <rect key="frame" x="27.5" y="0.0" width="190" height="30"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -35,7 +35,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgF-OR-9ud">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgF-OR-9ud">
                                         <rect key="frame" x="27.5" y="51" width="190" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="LcU-Xp-xT3"/>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="-1857" y="-290"/>
         </scene>
-        <!--View Controller-->
+        <!--Rider View Controller-->
         <scene sceneID="y3r-SA-bfD">
             <objects>
-                <viewController id="jLs-9f-ccs" sceneMemberID="viewController">
+                <viewController id="jLs-9f-ccs" customClass="RiderViewController" customModule="Polover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPC-jw-OhR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,10 @@
                                 <state key="normal" title="Call For Ride ">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="callForRideButton:" destination="jLs-9f-ccs" eventType="touchUpInside" id="V67-AO-lot"/>
+                                    <action selector="callForrideButton:" destination="jLs-9f-ccs" eventType="touchUpInside" id="oJw-JV-oeF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,11 +173,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfa-9U-voH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pTw-TT-Gy8"/>
+                    <navigationItem key="navigationItem" id="pTw-TT-Gy8">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Rde-zr-TuA">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="jLs-9f-ccs" id="gg7-h9-Jxv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callForRide" destination="ft4-PQ-ZhC" id="dft-l5-8a6"/>
+                        <outlet property="map" destination="9jd-ek-qhy" id="mZc-uH-q6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuM-aR-jqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120.8" y="-290.10494752623691"/>
+            <point key="canvasLocation" x="-281" y="-296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d6D-QQ-GGs">
